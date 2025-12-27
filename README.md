@@ -56,3 +56,87 @@ Movie Central is a Java-based backend application designed to manage a collectio
 
 
 
+
+
+
+🟢 Application Startup Flow
+
+IMDB.java
+   ↓
+User_login.java
+   ↓
+[Login Success]
+   ↓
+user_home.java
+
+
+
+🔐 Login Flow
+
+User_login.java
+   ↓
+Validate Input
+   ↓
+DBLoader → MySQL
+   ↓
+✔ Valid → user_home
+✖ Invalid → Error Message
+
+
+
+📝 Sign-Up Flow
+
+user_sign_up.java
+   ↓
+Validate Fields
+   ↓
+DBLoader → Insert User
+   ↓
+Redirect to Login
+
+
+
+🎬 Movie Fetching Flow (API Based)
+
+User clicks category
+   ↓
+TopTrending / TopRated / TopUpcoming
+   ↓
+MyClient.java
+   ↓
+HTTP API Request
+   ↓
+JSON Response
+   ↓
+Parse JSON
+   ↓
+Display movies (Posters, Titles, Dates)
+
+
+
+
+👤 Profile Management Flow
+
+manage_profiel.java
+   ↓
+Fetch user details
+   ↓
+Update profile
+   ↓
+DBLoader → Update DB
+
+
+
+
+🔑 Change Password Flow
+
+Change_password.java
+   ↓
+Validate old password
+   ↓
+DBLoader → Update password
+   ↓
+Success / Failure Message
+
+
+
